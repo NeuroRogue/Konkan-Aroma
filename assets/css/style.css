@@ -339,7 +339,7 @@ h3 { font-size: var(--fs-h3); }
   fill: var(--kokum);
 }
 .purity-stamp .stamp-big { font-size: 15px; font-weight: 700; }
-.purity-stamp .stamp-small { font-size: 6.5px; letter-spacing: 2px; font-weight: 600; }
+.purity-stamp .stamp-small { font-size: 6px; letter-spacing: 1.2px; font-weight: 600; }
 
 .stamp-float {
   position: absolute;
@@ -464,6 +464,38 @@ h3 { font-size: var(--fs-h3); }
 /* -------------------------------------------------------------
    12. PRODUCT CARDS
    ------------------------------------------------------------- */
+
+/* Category toggle — switches between the two product groups */
+.category-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-lg);
+}
+
+.category-btn {
+  background: var(--white);
+  border: 2px solid var(--sand);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.category-btn:hover { border-color: var(--terracotta); color: var(--terracotta-dk); }
+.category-btn.active {
+  background: var(--green-deep);
+  border-color: var(--green-deep);
+  color: var(--cream);
+}
+
+/* Product grids are toggled by main.js adding/removing .is-hidden.
+   Hidden with display:none so no empty gap is left in the layout,
+   and content still exists in the DOM (no extra network requests
+   needed when switching tabs). */
+.product-grid.is-hidden { display: none; }
+
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;

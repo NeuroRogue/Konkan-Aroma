@@ -39,7 +39,7 @@
       <div class="reveal" style="max-width:680px;">
         <p class="eyebrow">The full range</p>
         <h1>Every jar, made the same honest way.</h1>
-        <p class="lede">Below is what we currently make — each one sourced, dried, and ground the way it's described on our story page. Quantities are limited by batch, not by demand, so ask us on WhatsApp about what's freshly ground this week.</p>
+        <p class="lede">We make two kinds of things: <strong>Konkani sweets &amp; nashta</strong>, built on desi ghee and jaggery the way our home kitchen always has, and <strong>spices &amp; masalas</strong>, ground fresh for coastal Konkan cooking. Quantities are limited by batch, so ask us on WhatsApp about what's fresh this week.</p>
       </div>
     </div>
   </section>
@@ -49,35 +49,130 @@
   </div>
 
   <!-- =========================================================
-       PRODUCT GRID
+       PRODUCT GRID — two categories, one visible at a time
+       Buttons and grids are linked purely by the data-category
+       attribute. To add a category later: add a button with a
+       new data-category value, and a matching .product-grid.
        ========================================================= -->
   <section class="section section-tint">
     <div class="container">
 
-      <div class="product-grid reveal">
+      <!-- Category toggle -->
+      <div class="category-toggle reveal" role="tablist" aria-label="Product category">
+        <button class="category-btn active" data-category="sweets" role="tab" aria-selected="true">Sweets &amp; Nashta</button>
+        <button class="category-btn" data-category="spices" role="tab" aria-selected="false">Spices &amp; Masala</button>
+      </div>
 
-        <!-- Product 1 -->
+      <!-- =====================================================
+           CATEGORY 1 — Sweets & Nashta (desi ghee, jaggery, etc.)
+           TO ADD A NEW SWEET: copy one <article class="product-card">
+           block below and edit its image, tag, title, description,
+           and chips.
+           ===================================================== -->
+      <div class="product-grid reveal" data-category="sweets">
+
+        <!-- Sweet 1 -->
         <article class="product-card">
           <div class="product-media">
-            <span class="product-tag">Bestseller</span>
-            <!-- Replace with real product photo: assets/images/malvani-masala.jpg -->
-            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=700&q=70" alt="Malvani masala blend, deep red ground spice powder">
+            <span class="product-tag">Festive favourite</span>
+            <!-- Replace with real product photo: assets/images/puran-poli.jpg -->
+            <img src="https://picsum.photos/seed/puranpoli/700/525" alt="Puran Poli, a sweet stuffed flatbread made with jaggery and lentils">
           </div>
           <div class="product-body">
-            <h3>Malvani Masala</h3>
-            <p>Our founding recipe — a fiery, deeply aromatic blend used across Konkan coastal kitchens for curries, fish, and koliwada.</p>
+            <h3>Puran Poli</h3>
+            <p>Soft wheat flatbread stuffed with a jaggery-lentil filling, finished with pure desi ghee — no shortcuts, no shelf-stable fillings.</p>
             <div class="chip-row">
-              <span class="chip">No Preservatives</span>
-              <span class="chip">No Artificial Colour</span>
+              <span class="chip">Desi Ghee</span>
+              <span class="chip">Pure Jaggery</span>
             </div>
           </div>
         </article>
 
-        <!-- Product 2 -->
+        <!-- Sweet 2 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Everyday sweet</span>
+            <!-- Replace with real product photo: assets/images/sutavla.jpg -->
+            <img src="https://picsum.photos/seed/sutavla/700/525" alt="Sutavla, sweet vermicelli roasted in desi ghee and jaggery">
+          </div>
+          <div class="product-body">
+            <h3>Sutavla (Sweet Vermicelli)</h3>
+            <p>Fine vermicelli roasted in desi ghee and simmered with jaggery — a quick, comforting Konkani nashta with no refined sugar.</p>
+            <div class="chip-row">
+              <span class="chip">Desi Ghee</span>
+              <span class="chip">No Refined Sugar</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sweet 3 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Konkani classic</span>
+            <!-- Replace with real product photo: assets/images/bhanavri.jpg -->
+            <img src="https://picsum.photos/seed/bhanavri/700/525" alt="Bhanavri Bhakorcha, a traditional Konkani sweet snack">
+          </div>
+          <div class="product-body">
+            <h3>Bhanavri / Bhakorcha</h3>
+            <p>A traditional Konkani sweet passed down through home kitchens — made exactly the way it always has been, nothing modernised.</p>
+            <div class="chip-row">
+              <span class="chip">Home-Style Recipe</span>
+              <span class="chip">No Preservatives</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sweet 4 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Dry fruit rich</span>
+            <!-- Replace with real product photo: assets/images/methi-ladoo.jpg -->
+            <img src="https://picsum.photos/seed/methiladoo/700/525" alt="Methi Ladoo, a dry fruit and fenugreek sweet ball">
+          </div>
+          <div class="product-body">
+            <h3>Methi Ladoo (Pure Dry Fruit Ladoo)</h3>
+            <p>Fenugreek, dry fruits, and jaggery bound in desi ghee — a nourishing, traditional winter sweet with nothing artificial added.</p>
+            <div class="chip-row">
+              <span class="chip">Desi Ghee</span>
+              <span class="chip">Pure Dry Fruits</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sweet 5 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Bestseller</span>
+            <!-- Replace with real product photo: assets/images/besan-ladoo.jpg -->
+            <img src="https://picsum.photos/seed/besanladoo/700/525" alt="Besan Ladoo, roasted gram flour sweet balls">
+          </div>
+          <div class="product-body">
+            <h3>Besan Ladoo</h3>
+            <p>Roasted gram flour, desi ghee, and jaggery, rolled the same day they're made — dense, grainy, and exactly as rich as it should be.</p>
+            <div class="chip-row">
+              <span class="chip">Desi Ghee</span>
+              <span class="chip">Pure Jaggery</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- =====================================================
+           CATEGORY 2 — Spices & Masala
+           TO ADD A NEW MASALA: copy one <article class="product-card">
+           block below and edit its image, tag, title, description,
+           and chips. (Ideas already in the pipeline: Konkani Masala,
+           Fish Fry Masala, Garam Masala, Kashmiri Bedgi Chilli Powder.)
+           ===================================================== -->
+      <div class="product-grid is-hidden reveal" data-category="spices">
+
+        <!-- Spice 1 -->
         <article class="product-card">
           <div class="product-media">
             <span class="product-tag">Everyday staple</span>
-            <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=700&q=70" alt="Turmeric powder, bright golden colour, in a wooden bowl">
+            <!-- Replace with real product photo: assets/images/turmeric-powder.jpg -->
+            <img src="https://picsum.photos/seed/turmericpowder/700/525" alt="Turmeric powder, bright golden colour, in a wooden bowl">
           </div>
           <div class="product-body">
             <h3>Pure Turmeric Powder</h3>
@@ -89,59 +184,12 @@
           </div>
         </article>
 
-        <!-- Product 3 -->
-        <article class="product-card">
-          <div class="product-media">
-            <span class="product-tag">Coastal favourite</span>
-            <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&w=700&q=70" alt="Assorted red chillies and whole spices for Konkan masala">
-          </div>
-          <div class="product-body">
-            <h3>Kolhapuri-Style Chilli Masala</h3>
-            <p>A bold, layered chilli blend built for heat that unfolds slowly rather than hitting all at once.</p>
-            <div class="chip-row">
-              <span class="chip">No Artificial Flavour</span>
-              <span class="chip">Small Batch</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 4 -->
-        <article class="product-card">
-          <div class="product-media">
-            <span class="product-tag">Tangy & rare</span>
-            <img src="https://images.unsplash.com/photo-1455853828816-0c301a011711?auto=format&fit=crop&w=700&q=70" alt="Dried kokum fruit rind, deep maroon, used in Konkan cooking">
-          </div>
-          <div class="product-body">
-            <h3>Sun-Dried Kokum</h3>
-            <p>Hand-picked and sun-dried kokum rind — the souring agent behind sol kadhi and classic Konkan fish curries.</p>
-            <div class="chip-row">
-              <span class="chip">Sun-Dried</span>
-              <span class="chip">No Additives</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 5 -->
-        <article class="product-card">
-          <div class="product-media">
-            <span class="product-tag">Aromatic base</span>
-            <img src="https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?auto=format&fit=crop&w=700&q=70" alt="Fresh coconut halves used in Konkan coconut-based masalas">
-          </div>
-          <div class="product-body">
-            <h3>Roasted Coconut Masala</h3>
-            <p>Slow-roasted coconut ground with whole spices — the base of countless Konkan gravies, made pantry-ready.</p>
-            <div class="chip-row">
-              <span class="chip">No Preservatives</span>
-              <span class="chip">Slow-Roasted</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 6 -->
+        <!-- Spice 2 -->
         <article class="product-card">
           <div class="product-media">
             <span class="product-tag">Fish-curry essential</span>
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=70" alt="Whole spices for Konkan fish curry masala blend">
+            <!-- Replace with real product photo: assets/images/fish-curry-masala.jpg -->
+            <img src="https://picsum.photos/seed/fishcurrymasala/700/525" alt="Whole spices for Konkan fish curry masala blend">
           </div>
           <div class="product-body">
             <h3>Konkan Fish Curry Masala</h3>
@@ -149,6 +197,57 @@
             <div class="chip-row">
               <span class="chip">No Artificial Colour</span>
               <span class="chip">No Artificial Flavour</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Spice 3 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Bestseller</span>
+            <!-- Replace with real product photo: assets/images/malvani-masala.jpg -->
+            <img src="https://picsum.photos/seed/malvanimasala/700/525" alt="Malvani masala blend, deep red ground spice powder">
+          </div>
+          <div class="product-body">
+            <h3>Malvani Masala</h3>
+            <p>Our founding recipe — a fiery, deeply aromatic blend used across Konkan coastal kitchens for curries, fish, and koliwada.</p>
+            <div class="chip-row">
+              <span class="chip">No Preservatives</span>
+              <span class="chip">No Artificial Colour</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Spice 4 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">Traditional</span>
+            <!-- Replace with real product photo: assets/images/konkan-tilkut.jpg -->
+            <img src="https://picsum.photos/seed/tilkut/700/525" alt="Konkan Tilkut, a roasted sesame and jaggery spice blend">
+          </div>
+          <div class="product-body">
+            <h3>Konkan Tilkut</h3>
+            <p>Roasted sesame ground the old way — a fragrant, slightly sweet-savoury staple used across Konkan households.</p>
+            <div class="chip-row">
+              <span class="chip">Stone-Ground</span>
+              <span class="chip">No Additives</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Spice 5 -->
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-tag">All-purpose</span>
+            <!-- Replace with real product photo: assets/images/ghati-masala.jpg -->
+            <img src="https://picsum.photos/seed/ghatimasala/700/525" alt="Ghati Masala, an all-purpose Maharashtrian spice blend">
+          </div>
+          <div class="product-body">
+            <h3>Ghati Masala</h3>
+            <p>A warm, everyday Maharashtrian blend for dals, vegetables, and gravies — balanced enough to reach for daily.</p>
+            <div class="chip-row">
+              <span class="chip">No Preservatives</span>
+              <span class="chip">Small Batch</span>
             </div>
           </div>
         </article>
@@ -163,27 +262,27 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">On every single product</p>
-        <h2>The same three checks, no exceptions</h2>
+        <p class="eyebrow">Across both categories</p>
+        <h2>The same checks, whether it's ladoo or masala</h2>
       </div>
       <div class="badge-row reveal">
         <div class="badge-card">
           <span class="badge-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L5 18a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9.5V3"/><line x1="4" y1="21" x2="20" y2="21" stroke="#C1602B"/></svg>
           </span>
-          <div><h3>No Preservatives</h3><p>Every product listed here is made to be used fresh, not stored indefinitely.</p></div>
+          <div><h3>No Preservatives</h3><p>Every sweet and every masala is made to be used fresh, not stored indefinitely.</p></div>
         </div>
         <div class="badge-card">
           <span class="badge-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
           </span>
-          <div><h3>No Artificial Colours</h3><p>Colour comes from the spice, roast, or dry method — never added separately.</p></div>
+          <div><h3>No Artificial Colours</h3><p>Colour comes from the spice, jaggery, or roast — never added separately.</p></div>
         </div>
         <div class="badge-card">
           <span class="badge-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.65-9 9-9 9z"/></svg>
           </span>
-          <div><h3>No Artificial Flavours</h3><p>What you taste is the ingredient list — nothing has been enhanced to compensate.</p></div>
+          <div><h3>No Artificial Flavours</h3><p>Desi ghee, jaggery, and whole spice — nothing enhanced to compensate.</p></div>
         </div>
       </div>
     </div>
@@ -196,7 +295,7 @@
     <div class="container reveal" style="max-width:520px; margin:0 auto;">
       <h2>Not sure which masala fits your recipe?</h2>
       <p class="lede" style="margin: 0.75rem auto 1.5rem;">Tell us what you're cooking on WhatsApp and we'll recommend the right blend, batch freshness, and quantity.</p>
-      <a href="https://wa.me/917900103422?text=Hi!%20I%E2%80%99m%20interested%20in%20your%20authentic%20food%20products." class="btn btn-whatsapp" target="_blank" rel="noopener">Ask on WhatsApp</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%E2%80%99m%20interested%20in%20your%20authentic%20food%20products." class="btn btn-whatsapp" target="_blank" rel="noopener">Ask on WhatsApp</a>
     </div>
   </section>
 

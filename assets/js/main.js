@@ -30,7 +30,35 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* -----------------------------------------------------------
-     2. Scroll reveal
+     2. Product category toggle (products.html only)
+     Buttons carry data-category, grids carry matching
+     data-category — clicking a button shows its grid and
+     hides the other. Pure show/hide, no page reload, no data
+     stored anywhere.
+     ----------------------------------------------------------- */
+  var categoryButtons = document.querySelectorAll('.category-btn');
+  var categoryGrids = document.querySelectorAll('.product-grid');
+
+  if (categoryButtons.length && categoryGrids.length) {
+    categoryButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-category');
+
+        categoryButtons.forEach(function (b) {
+          var isActive = b === btn;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        categoryGrids.forEach(function (grid) {
+          grid.classList.toggle('is-hidden', grid.getAttribute('data-category') !== target);
+        });
+      });
+    });
+  }
+
+  /* -----------------------------------------------------------
+     3. Scroll reveal
      Adds .js-ready to <html> so CSS only hides .reveal elements
      when JS is actually running (content never gets stuck
      invisible if JS fails or is blocked).

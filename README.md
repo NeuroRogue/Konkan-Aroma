@@ -38,6 +38,21 @@ assets/js/main.js
 assets/images/   (empty — drop real product photos here; see notes below)
 ```
 
+## Adding more products
+
+`products.html` has two categories, toggled by the buttons at the top of the Products section: **Sweets & Nashta** and **Spices & Masala**. Each is its own `<div class="product-grid" data-category="...">` containing five `<article class="product-card">` blocks.
+
+To add a new product:
+1. Open `products.html` and find the `product-grid` for the right category (`data-category="sweets"` or `data-category="spices"`).
+2. Copy one entire `<article class="product-card">...</article>` block.
+3. Paste it right after the last product in that category.
+4. Edit the image `src`, the `product-tag` label, the `<h3>` title, the description, and the two `<span class="chip">` labels.
+
+To add a whole new category (e.g. "Pickles"):
+1. Add a new button in `.category-toggle`: `<button class="category-btn" data-category="pickles" role="tab" aria-selected="false">Pickles</button>`
+2. Add a new `<div class="product-grid is-hidden" data-category="pickles">` with your product cards inside.
+3. No JavaScript changes needed — `main.js` reads `data-category` automatically.
+
 ## Swapping placeholder images for real photos
 
 Every `<img>` currently points to an Unsplash placeholder URL and has a comment above it like:
