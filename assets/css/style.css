@@ -215,31 +215,18 @@ h3 { font-size: var(--fs-h3); }
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Unbounded', sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--green-deep);
 }
 
-.logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--green-deep);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-.logo-mark svg { width: 18px; height: 18px; }
-
-.logo-tag {
+.logo-img {
+  height: 44px;
+  width: auto;
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
-  text-transform: uppercase;
+}
+
+.footer-logo-img {
+  height: 58px;
+  width: auto;
+  display: block;
 }
 
 /* Hamburger */
