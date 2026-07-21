@@ -214,23 +214,26 @@ h3 { font-size: var(--fs-h3); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--green-deep);
 }
 
-.logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--green-deep);
-  display: grid;
-  place-items: center;
+.logo-img {
+  width: 92px;
+  height: auto;
+  display: block;
+  object-fit: contain;
   flex-shrink: 0;
 }
-.logo-mark svg { width: 18px; height: 18px; }
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
 
 .logo-tag {
   display: block;
@@ -598,6 +601,15 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .footer-brand .logo { color: var(--cream); }
+.footer-logo-link {
+  width: fit-content;
+}
+.footer-logo-img {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .footer-brand p {
   margin-top: 0.75rem;
   color: #C9D4C1;
@@ -759,6 +771,11 @@ h3 { font-size: var(--fs-h3); }
 /* -------------------------------------------------------------
    18. RESPONSIVE BREAKPOINTS
    ------------------------------------------------------------- */
+@media (max-width: 720px) {
+  .logo-img { width: 72px; }
+  .footer-logo-img { width: 118px; }
+}
+
 @media (min-width: 600px) {
   .badge-row { grid-template-columns: repeat(3, 1fr); }
   .trust-strip { grid-template-columns: repeat(4, 1fr); }
